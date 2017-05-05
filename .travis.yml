@@ -1,0 +1,12 @@
+language: python
+sudo: false
+before_install: echo '1. before install'
+install: echo '1. install'
+before_script: echo '2. before script'
+script: echo '2. script'
+after_script: echo '2. after script'
+before_deploy: echo '3. before deploy'
+deploy:
+  provider: script
+  script: echo '3. deploy'
+after_deploy: echo '3. after deploy'
