@@ -9,6 +9,4 @@ before_deploy: echo '3. before deploy'
 deploy:
   provider: script
   script: echo '3. deploy'
-  on:
-    branch: master
 after_deploy: echo '3. after deploy'
