@@ -8,5 +8,5 @@ after_script: echo '2. after script'
 before_deploy: echo '3. before deploy'
 deploy:
   provider: script
-  script: echo '3. deploy'
+  script: echo '3. This a test PR that should not be deployed'
 after_deploy: echo '3. after deploy'
