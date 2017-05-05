@@ -7,9 +7,12 @@ script: echo '2. script'
 after_script: echo '2. after script'
 before_deploy: echo '3. before deploy'
 deploy:
-  provider: script
-  script: echo "3. deploy $TRAVIS_TAG"
-  on:
-    branch: master
-    tags: true
+  - provider: script
+    script: echo "3. deploy master"
+    on:
+      branch: master
+  - provider: script
+    script: echo "3. deploy tag $TRAVIS_TAG"
+    on:
+      tags: true
 after_deploy: echo '3. after deploy'
